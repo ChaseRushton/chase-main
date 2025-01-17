@@ -1,50 +1,74 @@
-<p align="center">
-  <img src="https://img.icons8.com/color/48/000000/magritte.png"/>
-</p>
-<h1 align="center">
-  # Portfolio 
-  <a href="https://chase-portfolio.com" target="_blank">
-    chase-portfolio.com - v1
-  </a>
-</h1>
-<p align="center">
-  The first iteration of <a href="https://chase-portfolio.com" target="_blank">chase-portfolio.com</a> built with React.js leveraging Material UI.
-</p>
+# Chase Rushton's Portfolio Website
 
-<img width="1306" alt="Screen Shot 2021-03-15 at 8 29 18 PM" src="https://user-images.githubusercontent.com/32211479/111238274-24f8b100-85cd-11eb-9d5a-00f07cbc05e9.png">
+A modern, interactive personal portfolio website built with React, showcasing my professional experience, education, publications, and presentations.
 
-## 🛠 set-up
+## 🚀 Live Site
 
-1. Install the dependencies
+Visit the live site at: [https://chaserushton.github.io/chase-main/](https://chaserushton.github.io/chase-main/)
 
-   ```sh
-   npm install or yarn
-   ```
+## 🛠️ Built With
 
-2. Start the development server
+- React.js
+- Material-UI
+- CSS3 with custom animations
+- GitHub Pages for deployment
 
-   ```sh
-   yarn run start
-   ```
+## ✨ Features
 
-## 🚀 build and run for production
+- Responsive design that works on all devices
+- Interactive DNA background animation
+- Binary rain effect
+- Smooth fade-in animations
+- Clean and modern UI
+- Education and experience timeline
+- Publications and presentations sections
+- External links to professional profiles
 
-1. Generate a full static production build
+## 🏃‍♂️ Running Locally
 
-   ```sh
-   npm run build
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/ChaseRushton/chase-main.git
+```
 
+2. Install dependencies:
+```bash
+cd chase-main
+npm install
+```
 
-## 🎨 color codes
+3. Start the development server:
+```bash
+npm start
+```
 
-| Color          | Hex                                                                |
-| -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
-| Light Navy     | ![#112240](https://via.placeholder.com/10/0a192f?text=+) `#112240` |
-| Lightest Navy  | ![#233554](https://via.placeholder.com/10/303C55?text=+) `#233554` |
-| Slate          | ![#8892b0](https://via.placeholder.com/10/8892b0?text=+) `#8892b0` |
-| Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
-| Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
-| White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📦 Deployment
+
+The site is automatically deployed to GitHub Pages using the gh-pages package. To deploy:
+
+```bash
+npm run deploy
+```
+
+## 📁 Project Structure
+
+- `/public` - Static assets and HTML template
+- `/src`
+  - `/components` - React components
+  - `/styles` - CSS stylesheets
+  - `/assets` - Images and other media
+  - `App.js` - Main application component
+  - `theme.js` - Theme configuration
+
+## 🔄 Updates
+
+To update the content:
+1. Modify the relevant component files in `/src/components`
+2. Test locally using `npm start`
+3. Deploy changes using `npm run deploy`
+
+## 📄 License
+
+MIT License - feel free to use this code for your own portfolio!
