@@ -67,7 +67,7 @@ class About extends React.Component {
 
     const three = (
       <p>
-        Outside of work, I like to cook, work on my car, gym, play video games, watch movies, build legos and tinker with my 3d printer and other tech. I'm particularly 
+        Outside of work, I like to spoil my dog, cook, work on my car, gym, play video games, watch movies, build legos and tinker with my 3d printer and other tech. I'm particularly 
         interested in population genetics and the application of AI in genomics research.
       </p>
     );
