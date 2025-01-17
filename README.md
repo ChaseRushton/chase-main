@@ -15,7 +15,7 @@
 </p>
 <p align="center">
   <strong>Bioinformatician</strong><br/>
-  <sup>Specializing in NGS analysis and pipelile development</sup>
+  <sup>Specializing in NGS analysis and pipeline development</sup>
 </p>
 <p align="center">
   <a href="https://chaserushton.github.io/chase-main/">Live Demo</a> •
