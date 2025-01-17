@@ -38,10 +38,23 @@ jobs:
 
       - name: Install Dependencies 
         run: |
-          npm install --no-package-lock
-          npm install --save-dev gh-pages@6.3.0
-          npm install --save @mui/material@5.0.0 @emotion/react@11.0.0 @emotion/styled@11.0.0
-          npm install --save @mui/icons-material@5.0.0 @mui/styles@6.4.0
+          # First install react and react-dom to ensure correct versions
+          npm install --save react@17.0.2 react-dom@17.0.2 --legacy-peer-deps
+          
+          # Install Material-UI packages
+          npm install --save @mui/material@5.0.0 @emotion/react@11.0.0 @emotion/styled@11.0.0 @mui/icons-material@5.0.0 @mui/styles@6.4.0 --legacy-peer-deps
+          
+          # Install other dependencies
+          npm install --save react-router-dom@5.3.0 react-transition-group@4.4.1 --legacy-peer-deps
+          
+          # Install react-typist with force to handle peer dependency
+          npm install --save react-typist@2.0.5 --force
+          
+          # Install dev dependencies
+          npm install --save-dev gh-pages@6.3.0 @babel/plugin-proposal-private-property-in-object@7.21.11 eslint@8.0.0 eslint-plugin-react@7.0.0 prettier@2.2.1 --legacy-peer-deps
+          
+          # Install react-scripts
+          npm install --save react-scripts@5.0.1 --legacy-peer-deps
         timeout-minutes: 10
 
       - name: Build 
