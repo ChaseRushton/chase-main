@@ -7,6 +7,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ChaseRushton/chase-main)](https://github.com/ChaseRushton/chase-main/commits/main)
 [![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=flat&logo=material-ui&logoColor=white)](https://mui.com/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ChaseRushton/chase-main/commits/main)
 
 <p align="center">
   <img src="public/assets/me2.jpg" alt="Chase Rushton" width="200" style="border-radius: 50%"/>
@@ -18,23 +20,39 @@ A modern, interactive personal portfolio website built with React, showcasing my
 
 </div>
 
+## 🎯 Overview
+
+A personal portfolio website that stands out with:
+- 🎨 Modern, minimalist design
+- 🌟 Interactive animations
+- 📱 Full responsiveness
+- ⚡ Optimal performance
+- 🔍 SEO optimization
+
+## 🖼️ Preview
+
+<div align="center">
+  <img src="public/assets/preview1.png" alt="Portfolio Preview" width="600"/>
+  <p><em>Interactive DNA Background & Professional Timeline</em></p>
+</div>
+
 ## ✨ Features
 
 <table>
   <tr>
-    <td>✅ Responsive Design</td>
-    <td>✅ Interactive DNA Animation</td>
-    <td>✅ Binary Rain Effect</td>
+    <td align="center">✅ Responsive Design</td>
+    <td align="center">✅ Interactive DNA Animation</td>
+    <td align="center">✅ Binary Rain Effect</td>
   </tr>
   <tr>
-    <td>✅ Smooth Transitions</td>
-    <td>✅ Modern UI/UX</td>
-    <td>✅ Timeline View</td>
+    <td align="center">✅ Smooth Transitions</td>
+    <td align="center">✅ Modern UI/UX</td>
+    <td align="center">✅ Timeline View</td>
   </tr>
   <tr>
-    <td>✅ Publications Section</td>
-    <td>✅ Presentations Gallery</td>
-    <td>✅ Professional Links</td>
+    <td align="center">✅ Publications Section</td>
+    <td align="center">✅ Presentations Gallery</td>
+    <td align="center">✅ Professional Links</td>
   </tr>
 </table>
 
@@ -67,25 +85,41 @@ npm start
 
 ## 🛠️ Built With
 
-- ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) - Frontend framework
-- ![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=flat&logo=material-ui&logoColor=white) - UI components
-- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) - Custom animations
-- ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-100000?style=flat&logo=github&logoColor=white) - Deployment
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40" height="40"/>
+      <br>React
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" width="40" height="40"/>
+      <br>Material-UI
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40"/>
+      <br>CSS3
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"/>
+      <br>JavaScript
+    </td>
+  </tr>
+</table>
 
 ## 📁 Project Structure
 
 ```bash
 chase-main/
-├── public/                # Static files
-│   ├── assets/           # Images and media
-│   └── index.html        # HTML template
-├── src/
-│   ├── components/       # React components
-│   ├── styles/           # CSS stylesheets
-│   ├── assets/          # Component assets
-│   ├── App.js           # Main component
-│   └── theme.js         # Theme config
-└── package.json         # Dependencies
+├── 📂 public/                # Static files
+│   ├── 🖼️ assets/           # Images and media
+│   └── 📄 index.html        # HTML template
+├── 📂 src/
+│   ├── 🧩 components/       # React components
+│   ├── 🎨 styles/           # CSS stylesheets
+│   ├── 🖼️ assets/          # Component assets
+│   ├── 📱 App.js           # Main component
+│   └── 🎯 theme.js         # Theme config
+└── 📦 package.json         # Dependencies
 ```
 
 ## 📦 Deployment
@@ -102,9 +136,13 @@ npm run deploy
 2. Test changes locally with `npm start`
 3. Deploy with `npm run deploy`
 
-## 📝 License
+## 🎯 Performance Optimizations
 
-MIT License - feel free to use this code for your own portfolio!
+- ⚡ Lazy loading of images
+- 📦 Code splitting for optimal loading
+- 🔍 SEO-friendly meta tags
+- 📱 Responsive images for different devices
+- 🚀 Minified production build
 
 ## 🤝 Contributing
 
@@ -116,6 +154,21 @@ MIT License - feel free to use this code for your own portfolio!
 
 ## 📧 Contact
 
-Chase Rushton - [LinkedIn](https://www.linkedin.com/in/chase-rushton/) - [GitHub](https://github.com/ChaseRushton)
+<div align="center">
+  <a href="https://www.linkedin.com/in/chase-rushton/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/ChaseRushton">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</div>
 
-Project Link: [https://github.com/ChaseRushton/chase-main](https://github.com/ChaseRushton/chase-main)
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by Chase Rushton</sub>
+</div>
