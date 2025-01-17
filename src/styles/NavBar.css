@@ -1,0 +1,122 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 45px;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand a {
+  color: #64ffda;
+  font-family: "NTR", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.nav-brand a:hover {
+  color: #64ffda;
+  transform: translateY(-2px);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a {
+  color: #ccd6f6;
+  font-family: "NTR", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+}
+
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #64ffda;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item a:hover {
+  color: #64ffda;
+}
+
+.nav-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-icons a {
+  color: #ccd6f6;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  line-height: 1;
+  padding: 5px;
+}
+
+.nav-icons a:hover {
+  color: #64ffda;
+  transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    padding: 0 1.5rem;
+    height: 40px;
+  }
+
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-icons {
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+}

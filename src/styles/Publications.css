@@ -1,0 +1,46 @@
+#publications {
+  min-height: 30vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.publications-content {
+  margin-top: 40px;
+}
+
+.publication-title {
+  color: var(--lightest-slate) !important;
+  font-family: "NTR", sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+}
+
+.publication-type-paper {
+  background-color: var(--green-bright) !important;
+  color: var(--black) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+}
+
+.publication-type-poster {
+  background-color: var(--light-navy) !important;
+  color: var(--lightest-slate) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+  border: 1px solid var(--green-bright) !important;
+}
+
+.publication-type-presentation {
+  background-color: var(--lightest-navy) !important;
+  color: var(--green-bright) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+}
+
+.publication-note {
+  color: var(--slate) !important;
+  border-color: var(--slate) !important;
+  font-family: "NTR", sans-serif !important;
+}

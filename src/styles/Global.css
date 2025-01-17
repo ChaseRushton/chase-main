@@ -1,0 +1,22 @@
+:root {
+  --black: #000000;
+  --dark-navy: #0a0a0a;
+  --navy: rgba(18, 18, 18, 0.7);
+  --light-navy: rgba(26, 26, 26, 0.5);
+  --lightest-navy: rgba(36, 36, 36, 0.3);
+  --navy-shadow: rgba(0, 0, 0, 0.7);
+  --slate: #9ba1b7;
+  --light-slate: #bdc3db;
+  --lightest-slate: #e0e4f4;
+  --white: #ffffff;
+  --green-bright: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+  --card-shadow: rgba(100, 255, 218, 0.1);
+}
+
+body {
+  background-color: var(--black);
+  margin: 0;
+  padding: 0;
+  color: var(--light-slate);
+}

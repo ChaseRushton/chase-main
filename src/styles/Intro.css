@@ -1,0 +1,118 @@
+.Typist .Cursor {
+  display: inline-block;
+  color: var(--green-bright);
+}
+
+.Typist .Cursor--blinking {
+  opacity: 1;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#intro {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+#intro-content {
+  max-width: 600px;
+  margin-right: 400px;
+  z-index: 1;
+}
+
+#animations-container {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0;
+  z-index: 0;
+}
+
+.intro-title {
+  font-family: "NTR", sans-serif;
+  font-size: 85px;
+  color: var(--lightest-slate);
+}
+
+.intro-title .Typist {
+  font-family: "NTR", sans-serif;
+  font-size: 85px;
+  color: var(--lightest-slate);
+}
+
+.intro-name {
+  font-family: "NTR", sans-serif;
+  color: var(--green-bright);
+}
+
+.intro-subtitle {
+  font-family: "NTR", sans-serif;
+  color: var(--green-bright);
+  margin: 0;
+  font-size: 35px;
+}
+
+.intro-subtitle .Typist {
+  font-family: "NTR", sans-serif;
+  color: var(--green-bright);
+  font-size: 35px;
+}
+
+.intro-desc {
+  margin-top: 20px;
+  font-family: "NTR", sans-serif;
+  font-size: 22px;
+  color: var(--slate);
+  max-width: 600px;
+  text-align: justify;
+}
+
+.intro-contact {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  font-family: "NTR", sans-serif;
+  font-size: 22px;
+  color: var(--green-bright) !important;
+  border: 1px solid var(--green-bright);
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.intro-contact:hover {
+  background-color: var(--green-tint);
+  transform: translateY(-3px);
+}
+
+.intro-contact svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #intro {
+    padding: 50px;
+  }
+  
+  #intro-content {
+    margin-right: 0;
+  }
+  
+  #animations-container {
+    display: none;
+  }
+}

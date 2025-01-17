@@ -1,0 +1,68 @@
+#presentations {
+  min-height: 30vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.presentations-content {
+  margin-top: 40px;
+}
+
+.presentation-role {
+  color: var(--green-bright) !important;
+  font-family: "NTR", sans-serif !important;
+  font-size: 20px !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.presentation-event {
+  color: var(--lightest-slate) !important;
+  font-family: "NTR", sans-serif !important;
+  font-size: 24px !important;
+}
+
+.presentation-year {
+  background-color: var(--light-navy) !important;
+  color: var(--green-bright) !important;
+  border: 1px solid var(--green-bright) !important;
+  font-family: "NTR", sans-serif !important;
+}
+
+.presentation-type-invited {
+  background-color: var(--green-bright) !important;
+  color: var(--black) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+}
+
+.presentation-type-conference {
+  background-color: var(--light-navy) !important;
+  color: var(--lightest-slate) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+  border: 1px solid var(--slate) !important;
+}
+
+.presentation-type-university {
+  background-color: var(--lightest-navy) !important;
+  color: var(--green-bright) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+}
+
+.presentation-type-lecture {
+  background-color: var(--light-navy) !important;
+  color: var(--green-bright) !important;
+  border: 1px solid var(--green-bright) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+}
+
+.presentation-type-national {
+  background: linear-gradient(45deg, var(--green-bright), var(--light-navy)) !important;
+  color: var(--black) !important;
+  font-family: "NTR", sans-serif !important;
+  font-weight: bold !important;
+}

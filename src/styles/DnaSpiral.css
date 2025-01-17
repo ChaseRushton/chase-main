@@ -1,0 +1,22 @@
+.dna-spiral {
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dna-spiral:hover {
+  opacity: 1;
+}
+
+#dna-spiral-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

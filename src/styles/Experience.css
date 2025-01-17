@@ -1,0 +1,204 @@
+#experience {
+  min-height: 30vh;
+  margin: auto;
+  max-width: 1200px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  padding-left: 100px;
+  padding-right: 50px;
+}
+
+.experience-content {
+  margin-top: 40px;
+}
+
+.job-company {
+  font-family: "NTR", sans-serif;
+  color: var(--green-bright);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.job-duration {
+  font-family: "NTR", sans-serif;
+  color: var(--slate);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.job-position {
+  font-family: "NTR", sans-serif;
+  color: var(--lightest-slate);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.job-description {
+  font-family: "NTR", sans-serif;
+  color: var(--light-slate);
+  font-size: 18px;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.job-description li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.job-description li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: rgba(100, 255, 218, 0.7);
+}
+
+.job-card {
+  margin-bottom: 30px;
+  padding: 45px 25px 35px 45px;
+  background-color: var(--light-navy);
+  border: 1px solid rgba(36, 36, 36, 0.5);
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.job-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(100, 255, 218, 0.7);
+}
+
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.job-tag {
+  display: inline-block;
+  background-color: rgba(36, 36, 36, 0.3);
+  color: rgba(100, 255, 218, 0.9);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-family: "NTR", sans-serif;
+  border: 1px solid rgba(100, 255, 218, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.job-tag:hover {
+  transform: translateY(-2px);
+  background-color: rgba(100, 255, 218, 0.15);
+  border-color: rgba(100, 255, 218, 0.9);
+}
+
+.experience-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  background-color: var(--light-navy);
+  color: var(--green-bright);
+  border: 1px solid var(--green-bright);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: var(--green-tint);
+  transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+  background-color: var(--light-navy);
+  color: var(--slate);
+  border-color: var(--slate);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Timeline styles */
+.timeline-container {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(100, 255, 218, 0.5);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(100, 255, 218, 0.7);
+  margin-top: 10px;
+}
+
+/* MuiTab styles */
+.MuiTab-wrapper {
+  font-size: 16px;
+  text-align: left;
+  align-items: flex-start !important;
+  font-family: "NTR", sans-serif;
+}
+
+.MuiButtonBase-root {
+  outline: none !important;
+  color: var(--lightest-slate) !important;
+}
+
+.PrivateTabIndicator-colorSecondary-5 {
+  background-color: var(--green-bright) !important;
+}
+
+.jss5 {
+  background-color: var(--green-bright) !important;
+}
+
+.makeStyles-tabs-2 {
+  border-right: 1px solid var(--lightest-navy) !important;
+}
+
+#experience .MuiTab-root {
+  padding: 6px 20px;
+}
+
+.MuiButtonBase-root:focus {
+  color: var(--green-bright) !important;
+}
+
+/* List styles */
+ul {
+  list-style: none;
+  margin-left: -40px;
+}
+
+/* Media query */
+@media only screen and (max-width: 768px) {
+  #experience {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .job-card {
+    padding: 25px;
+  }
+}
