@@ -73,25 +73,26 @@
 .intro-contact {
   text-decoration: none;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 15px;
   font-family: "NTR", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   color: var(--green-bright) !important;
   border: 1px solid var(--green-bright);
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 8px 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .intro-contact:hover {
   background-color: var(--green-tint);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .intro-contact svg {
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 4px;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
