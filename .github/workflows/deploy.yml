@@ -29,11 +29,20 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
+      - name: Clean Install
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm cache clean --force
+        continue-on-error: true
+
       - name: Install Dependencies 
         run: |
-          npm ci --legacy-peer-deps
-          npm install gh-pages --save-dev
-        timeout-minutes: 5
+          npm install --no-package-lock
+          npm install --save-dev gh-pages@6.3.0
+          npm install --save @mui/material@5.0.0 @emotion/react@11.0.0 @emotion/styled@11.0.0
+          npm install --save @mui/icons-material@5.0.0 @mui/styles@6.4.0
+        timeout-minutes: 10
 
       - name: Build 
         run: |
