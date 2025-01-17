@@ -20,10 +20,10 @@ class About extends React.Component {
   render() {
     const one = (
       <p>
-        I am currently a <b>Bioinformatician</b> at{" "}
+        I am currently a Bioinformatician at{" "}
         <a href="https://www.pennmedicine.org/">University of Pennsylvania Health System</a>, 
-        where I work at the intersection of biology and computer science. I hold a <b>Master's degree in Bioinformatics</b>{" "}
-        and completed my undergraduate studies in <b>Microbial, Cellular, and Molecular Biology</b> at{" "}
+        where I work at the intersection of biology and computer science. I hold a Master's degree in Bioinformatics {" "}
+        and completed my undergraduate studies in Microbial, Cellular, and Molecular Biology at{" "}
         <a href="https://www.auburn.edu/">Auburn University</a>.
       </p>
     );
