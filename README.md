@@ -10,17 +10,13 @@
 [![Code Style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![Node](https://img.shields.io/badge/Node-18.x-green.svg)](https://nodejs.org/)
 
-<br/>
-
 <p align="center">
   <img src="public/assets/me2.jpg" alt="Chase Rushton" width="200" style="border-radius: 50%"/>
 </p>
-
 <p align="center">
   <strong>Research Assistant & Software Engineer</strong><br/>
   <sup>Specializing in Machine Learning & Full Stack Development</sup>
 </p>
-
 <p align="center">
   <a href="https://chaserushton.github.io/chase-main/">Live Demo</a> •
   <a href="https://github.com/ChaseRushton/chase-main/issues">Report Bug</a> •
