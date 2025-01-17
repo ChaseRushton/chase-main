@@ -14,8 +14,8 @@
   <img src="public/assets/me2.jpg" alt="Chase Rushton" width="200" style="border-radius: 50%"/>
 </p>
 <p align="center">
-  <strong>Research Assistant & Software Engineer</strong><br/>
-  <sup>Specializing in Machine Learning & Full Stack Development</sup>
+  <strong>Bioinformatician</strong><br/>
+  <sup>Specializing in NGS analysis and pipelile development</sup>
 </p>
 <p align="center">
   <a href="https://chaserushton.github.io/chase-main/">Live Demo</a> •
