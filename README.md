@@ -69,6 +69,3 @@ To update the content:
 2. Test locally using `npm start`
 3. Deploy changes using `npm run deploy`
 
-## 📄 License
-
-MIT License - feel free to use this code for your own portfolio!
