@@ -19,20 +19,23 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 80px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
 #intro-content {
   max-width: 600px;
-  margin-right: 400px;
+  margin-right: 300px;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 #animations-container {
   position: absolute;
-  right: 100px;
+  right: 80px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -44,45 +47,33 @@
   font-family: "NTR", sans-serif;
   font-size: 85px;
   color: var(--lightest-slate);
+  margin-bottom: 10px;
 }
 
 .intro-title .Typist {
   font-family: "NTR", sans-serif;
   font-size: 85px;
-  color: var(--lightest-slate);
-}
-
-.intro-name {
-  font-family: "NTR", sans-serif;
-  color: var(--green-bright);
 }
 
 .intro-subtitle {
-  font-family: "NTR", sans-serif;
   color: var(--green-bright);
-  margin: 0;
-  font-size: 35px;
-}
-
-.intro-subtitle .Typist {
   font-family: "NTR", sans-serif;
-  color: var(--green-bright);
-  font-size: 35px;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .intro-desc {
-  margin-top: 20px;
   font-family: "NTR", sans-serif;
   font-size: 22px;
   color: var(--slate);
-  max-width: 600px;
-  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .intro-contact {
   text-decoration: none;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 20px;
   font-family: "NTR", sans-serif;
   font-size: 22px;
   color: var(--green-bright) !important;
@@ -105,14 +96,26 @@
 
 @media only screen and (max-width: 1200px) {
   #intro {
-    padding: 50px;
+    padding: 0 50px;
   }
-  
+
   #intro-content {
     margin-right: 0;
   }
-  
+
   #animations-container {
     display: none;
+  }
+
+  .intro-title {
+    font-size: 70px;
+  }
+
+  .intro-subtitle {
+    font-size: 35px;
+  }
+
+  .intro-desc {
+    font-size: 20px;
   }
 }
