@@ -1,113 +1,84 @@
 import React from "react";
 import "../styles/Presentations.css";
-import FadeInSection from "./FadeInSection";
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Chip from '@mui/material/Chip';
+import ScrollReveal from "./ScrollReveal";
 
-const StyledPresentationItem = styled(Box)(({ theme }) => ({
-  marginBottom: '1.5rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--lightest-navy)',
-  borderRadius: '5px',
-  transition: 'transform 0.2s ease-in-out',
-  '&:hover': {
-    transform: 'translateX(10px)'
-  }
-}));
+const Presentations = () => {
+  const presentations = [
+    {
+      role: "Speaker",
+      event: "Boshel",
+      years: ["2013", "2014"],
+      type: "conference",
+      description: "Presented research findings on genomic analysis techniques"
+    },
+    {
+      role: "Speaker",
+      event: "Poster, SEEPEG",
+      years: ["2017"],
+      type: "conference",
+      description: "Showcased developments in NGS pipeline optimization"
+    },
+    {
+      role: "Speaker",
+      event: "Auburn University Research Week",
+      years: ["2017", "2018"],
+      type: "university conference",
+      description: "Presented advancements in bioinformatics research"
+    },
+    {
+      role: "Poster Presenter",
+      event: "Association for Molecular Pathology",
+      years: ["2019", "2021", "2022", "2023"],
+      type: "conference",
+      description: "Demonstrated innovations in molecular diagnostic testing"
+    },
+    {
+      role: "Guest Lecturer",
+      event: "Auburn Genomic Biology",
+      years: ["Spring 2021"],
+      type: "lecture",
+      description: "Delivered comprehensive lectures on genomic biology concepts"
+    },
+    {
+      role: "Invited Talk",
+      event: "GOAL Informatics Group",
+      years: ["2021", "2022", "2023"],
+      type: "invited",
+      description: "Shared insights on bioinformatics pipeline development"
+    },
+    {
+      role: "National Invited Talk",
+      event: "GOAL",
+      years: ["2023"],
+      type: "invited",
+      description: "Presented national-level findings on genomic analysis"
+    }
+  ];
 
-class Presentations extends React.Component {
-  render() {
-    const presentations = [
-      {
-        role: "Speaker",
-        event: "Boshel",
-        years: ["2013", "2014"],
-        type: "conference"
-      },
-      {
-        role: "Speaker",
-        event: "Poster, SEEPEG",
-        years: ["2017"],
-        type: "conference"
-      },
-      {
-        role: "Speaker",
-        event: "Auburn University Research Week",
-        years: ["2017", "2018"],
-        type: "university conference"
-      },
-      {
-        role: "Poster Presenter",
-        event: "Association for Molecular Pathology",
-        years: ["2019", "2021", "2022", "2023"],
-        type: "conference"
-      },
-      {
-        role: "Guest Lecturer",
-        event: "Auburn Genomic Biology",
-        years: ["Spring 2021"],
-        type: "lecture"
-      },
-      {
-        role: "Invited Talk",
-        event: "GOAL Informatics Group",
-        years: ["2021", "2022", "2023"],
-        type: "invited"
-      },
-      {
-        role: "National Invited Talk",
-        event: "GOAL",
-        years: ["2023"],
-        type: "Invited"
-      }
-    ];
-
-    return (
-      <div id="presentations">
-        <FadeInSection>
-          <div className="section-header">
-            <span className="section-title">/ presentations & invited lectures</span>
-          </div>
-          
-          <div className="presentations-content">
-            {presentations.map((pres, index) => (
-              <FadeInSection key={index} delay={`${index * 100}ms`}>
-                <StyledPresentationItem>
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-                    <Box>
-                      <Typography variant="h6" className="presentation-role">
-                        {pres.role}
-                      </Typography>
-                      <Typography variant="h5" className="presentation-event">
-                        {pres.event}
-                      </Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1 }}>
-                      {pres.years.map((year, i) => (
-                        <Chip
-                          key={i}
-                          label={year}
-                          className="presentation-year"
-                        />
-                      ))}
-                    </Box>
-                  </Box>
-                  <Box sx={{ mt: 2 }}>
-                    <Chip
-                      label={pres.type}
-                      className={`presentation-type-${pres.type}`}
-                    />
-                  </Box>
-                </StyledPresentationItem>
-              </FadeInSection>
-            ))}
-          </div>
-        </FadeInSection>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="section-container" id="presentations">
+      <ScrollReveal>
+        <div className="section-header">
+          <h2 className="section-title">Presentations & Invited Lectures</h2>
+          <p className="section-description">Speaking engagements and research presentations</p>
+        </div>
+        
+        <div className="presentations-content grid-layout">
+          {presentations.map((presentation, index) => (
+            <div key={index} className="presentation-item card-container">
+              <h3 className="title-text">{presentation.event}</h3>
+              <div className="presentation-meta">
+                <span className="subtitle-text">{presentation.role}</span>
+                <span className="tag">{presentation.years.join(", ")}</span>
+                <span className="tag">{presentation.type}</span>
+              </div>
+              <p className="body-text">{presentation.description}</p>
+            </div>
+          ))}
+        </div>
+      </ScrollReveal>
+    </div>
+  );
+};
 
 export default Presentations;

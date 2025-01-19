@@ -3,7 +3,6 @@ import "../styles/Intro.css";
 import Typist from "react-typist";
 import "react-typist/dist/Typist.css";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import BinaryRain from "./BinaryRain";
 
 class Intro extends React.Component {
   constructor() {
@@ -48,12 +47,8 @@ class Intro extends React.Component {
             href="mailto:chaserushton@gmail.com"
             className="intro-contact"
           >
-            <EmailRoundedIcon></EmailRoundedIcon>
-            {"  " + "Say hi!"}
+            <EmailRoundedIcon /> Say hi!
           </a>
-        </div>
-        <div id="animations-container">
-          <BinaryRain />
         </div>
       </div>
     );

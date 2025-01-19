@@ -1,68 +1,53 @@
 import React from "react";
 import "../styles/Education.css";
-import FadeInSection from "./FadeInSection";
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import ScrollReveal from "./ScrollReveal";
 
-const StyledEducationItem = styled(Box)(({ theme }) => ({
-  marginBottom: '2rem',
-  padding: '1.5rem',
-  backgroundColor: 'var(--lightest-navy)',
-  borderRadius: '5px',
-  transition: 'transform 0.2s ease-in-out',
-  '&:hover': {
-    transform: 'translateX(10px)'
-  }
-}));
+const Education = () => {
+  const education = [
+    {
+      school: "Auburn University",
+      degree: "M.S. Bioinformatics",
+      details: [
+        "Thesis: \"Broad characterization of structural variation and genetic differentiation in two hybridizing macaque species\"",
+        "Advisor: Dr. Laurie Stevison",
+        "Led a side project using the Sequenom iPLEX ADME PGx Panel on the MassARRAY System to genotype polymorphisms in D. pseudoobscura"
+      ]
+    },
+    {
+      school: "Auburn University",
+      degree: "B.S. Microbial, Cellular, and Molecular Biology",
+      details: [
+        "Minor in Computer Science",
+        "Graduated Cum Laude",
+        "Undergraduate research in bioinformatics and molecular biology"
+      ]
+    }
+  ];
 
-class Education extends React.Component {
-  render() {
-    return (
-      <div id="education">
-        <FadeInSection>
-          <div className="section-header">
-            <span className="section-title">/ education</span>
-          </div>
-          
-          <div className="education-content">
-            <StyledEducationItem>
-              <Typography variant="h5" className="education-school">
-                Auburn University
-              </Typography>
-              <Typography variant="h6" className="education-degree">
-                M.S. Bioinformatics
-              </Typography>
-              <Typography variant="body1" className="education-details">
-                <ul>
-                  <li>Thesis: "Broad characterization of structural variation and genetic differentiation in two hybridizing macaque species"</li>
-                  <li>Advisor: Dr. Laurie Stevison</li>
-                  <li>Led a side project using the Sequenom iPLEX ADME PGx Panel on the MassARRAY System to genotype polymorphisms in D. pseudoobscura</li>
-                </ul>
-              </Typography>
-            </StyledEducationItem>
-
-            <StyledEducationItem>
-              <Typography variant="h5" className="education-school">
-                Auburn University
-              </Typography>
-              <Typography variant="h6" className="education-degree">
-                B.S. Molecular and Cellular Microbiology
-              </Typography>
-              <Typography variant="body1" className="education-details">
-                <ul>
-                  <li>Laboratory of Ramesh Jeganathan, Ph.D., Director of Diabetes and Alzheimer Research Laboratory</li>
-                  <li>Focused on insulin signaling in animal models of obesity and type 2 diabetes</li>
-                  <li>Investigated molecular mechanisms responsible for insulin resistance in type 2 diabetes</li>
-                  <li>Explored the link between Alzheimer's disease and type 2 diabetes</li>
-                </ul>
-              </Typography>
-            </StyledEducationItem>
-          </div>
-        </FadeInSection>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="section-container" id="education">
+      <ScrollReveal>
+        <div className="section-header">
+          <h2 className="section-title">Education</h2>
+          <p className="section-description">Academic background and achievements</p>
+        </div>
+        
+        <div className="education-content grid-layout">
+          {education.map((item, index) => (
+            <div key={index} className="education-item card-container">
+              <h3 className="title-text">{item.school}</h3>
+              <h4 className="subtitle-text">{item.degree}</h4>
+              <ul className="styled-list">
+                {item.details.map((detail, i) => (
+                  <li key={i}>{detail}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </ScrollReveal>
+    </div>
+  );
+};
 
 export default Education;

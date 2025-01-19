@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Projects.css";
-import FadeInSection from "./FadeInSection";
+import ScrollReveal from "./ScrollReveal";
 
 const Projects = () => {
   const projects = [
@@ -32,11 +32,11 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <FadeInSection>
+      <ScrollReveal>
         <div className="section-header">
-          <h2 className="section-title">Featured Projects</h2>
+          <h2 className="section-title">Current Projects</h2>
           <p className="section-description">
-            Notable contributions in genomics and bioinformatics
+            Some things I'm working on
           </p>
         </div>
         <div className="projects-grid">
@@ -68,7 +68,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-      </FadeInSection>
+      </ScrollReveal>
     </div>
   );
 };
