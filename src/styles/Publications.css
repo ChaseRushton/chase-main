@@ -4,10 +4,35 @@
   min-height: 100vh;
   padding-top: 100px;
   padding-bottom: 150px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
 .publications-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   margin-top: 40px;
+}
+
+.publication-card {
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--bg-hover);
+}
+
+.publication-header {
+  margin-bottom: 20px;
 }
 
 .publication-title {
@@ -15,6 +40,61 @@
   font-family: "NTR", sans-serif !important;
   font-size: 20px !important;
   line-height: 1.4 !important;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.publication-journal {
+  color: var(--green-bright);
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.publication-date {
+  color: var(--light-slate);
+  font-size: clamp(14px, 1.8vw, 16px);
+  margin: 5px 0 0 0;
+}
+
+.publication-description {
+  color: var(--light-slate);
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.publication-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.publication-link {
+  color: var(--green-bright);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  background-color: var(--tag-bg);
+  border-radius: 6px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.publication-link:hover {
+  background-color: var(--tag-bg-hover);
+  transform: translateY(-2px);
+  border-color: rgba(100, 255, 218, 0.2);
+}
+
+.publication-link svg {
+  width: 16px;
+  height: 16px;
 }
 
 .publication-type-paper {
@@ -43,4 +123,26 @@
   color: var(--slate) !important;
   border-color: var(--slate) !important;
   font-family: "NTR", sans-serif !important;
+}
+
+@media (max-width: 992px) {
+  .publications-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .publications-content {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .publication-card {
+    padding: 20px;
+  }
 }

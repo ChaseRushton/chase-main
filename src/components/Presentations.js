@@ -56,7 +56,7 @@ const Presentations = () => {
   ];
 
   return (
-    <div className="section-container" id="presentations">
+    <div id="presentations">
       <ScrollReveal>
         <div className="section-header">
           <h2 className="section-title">Presentations & Invited Lectures</h2>

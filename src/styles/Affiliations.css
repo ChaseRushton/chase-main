@@ -1,102 +1,85 @@
 #affiliations {
   min-height: 30vh;
-  margin: auto;
+  margin: 0 auto;
   max-width: 1000px;
   padding-top: 100px;
   padding-bottom: 150px;
-}
-
-.affiliations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-  gap: clamp(15px, 3vw, 25px);
-  margin-top: clamp(20px, 4vw, 30px);
-  width: 100%;
-}
-
-.affiliation-item {
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: clamp(20px, 4vw, 25px);
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.affiliation-item:hover {
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
-  transform: translateY(-5px);
 }
 
-.affiliation-content {
+.affiliations-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.affiliation-card {
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+}
+
+.affiliation-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--bg-hover);
 }
 
 .affiliation-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: clamp(10px, 2vw, 15px);
+  margin-bottom: 20px;
 }
 
-.affiliation-role {
-  color: var(--green-bright);
-  font-size: clamp(16px, 2vw, 18px);
-  font-weight: 600;
-  margin: 0;
-}
-
-.affiliation-duration {
-  color: var(--slate);
-  font-size: clamp(14px, 1.8vw, 16px);
-  padding: 4px 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.affiliation-organization {
+.affiliation-title {
   color: var(--white);
   font-size: clamp(18px, 2.5vw, 22px);
   font-weight: 600;
-  margin: 0 0 clamp(10px, 2vw, 15px) 0;
-  line-height: 1.4;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 0 10px 0;
 }
 
-.affiliation-organization a {
-  color: var(--white);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.affiliation-organization a:hover {
+.affiliation-organization {
   color: var(--green-bright);
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.affiliation-date {
+  color: var(--light-slate);
+  font-size: clamp(14px, 1.8vw, 16px);
+  margin: 5px 0 0 0;
 }
 
 .affiliation-description {
   color: var(--light-slate);
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.6;
-  margin: 0 0 clamp(15px, 3vw, 20px) 0;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.8;
+  margin-bottom: 20px;
   flex-grow: 1;
 }
 
 .affiliation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: auto;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .affiliation-type {
   display: inline-block;
-  padding: clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px);
+  padding: 4px 12px;
   border-radius: 4px;
-  font-size: clamp(12px, 1.5vw, 14px);
+  font-size: 14px;
   font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  text-transform: capitalize;
 }
 
 .affiliation-type.academic {
@@ -111,24 +94,59 @@
   border: 1px solid rgba(100, 200, 255, 0.3);
 }
 
-@media (max-width: 768px) {
-  .affiliations-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  
-  .affiliation-item {
-    padding: 20px;
-  }
-  
-  .affiliation-header {
-    flex-direction: column;
-    gap: 10px;
+.affiliation-links {
+  display: flex;
+  gap: 15px;
+}
+
+.affiliation-link {
+  color: var(--green-bright);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  background-color: var(--tag-bg);
+  border-radius: 6px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.affiliation-link:hover {
+  background-color: var(--tag-bg-hover);
+  transform: translateY(-2px);
+  border-color: rgba(100, 255, 218, 0.2);
+}
+
+.affiliation-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 992px) {
+  .affiliations-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (hover: none) {
-  .affiliation-item:hover {
-    transform: none;
+@media (max-width: 768px) {
+  .affiliations-content {
+    grid-template-columns: 1fr;
+  }
+
+  .affiliation-card {
+    padding: 25px;
+  }
+
+  .affiliation-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .affiliation-card {
+    padding: 20px;
   }
 }
