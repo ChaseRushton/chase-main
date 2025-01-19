@@ -11,23 +11,25 @@ import Publications from "./components/Publications";
 import Presentations from "./components/Presentations";
 import Affiliations from "./components/Affiliations";
 import NavBar from "./components/NavBar";
-import DnaBackground from "./components/DnaBackground";
+import BinaryRain from "./components/BinaryRain";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
+        <BinaryRain />
         <NavBar />
         <div id="content">
           <Intro></Intro>
           <About></About>
           <Experience></Experience>
+          <Projects></Projects>
           <Publications></Publications>
           <Presentations></Presentations>
           <Affiliations></Affiliations>
         </div>
-        <DnaBackground />
       </div>
     </ThemeProvider>
   );

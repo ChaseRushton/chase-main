@@ -20,3 +20,32 @@ body {
   padding: 0;
   color: var(--light-slate);
 }
+
+section {
+  margin: 0 auto;
+  padding: 100px 40px;
+  max-width: 1000px;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  margin-bottom: 40px;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.section-description {
+  color: var(--slate);
+  font-size: 18px;
+  line-height: 1.5;
+}
