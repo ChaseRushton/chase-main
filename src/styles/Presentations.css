@@ -1,144 +1,122 @@
 #presentations {
   min-height: 30vh;
-  margin: auto;
+  margin: 0 auto;
   max-width: 1000px;
   padding-top: 100px;
   padding-bottom: 150px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
-.presentations-grid {
+.presentations-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: clamp(15px, 3vw, 25px);
-  margin-top: clamp(20px, 4vw, 30px);
-  width: 100%;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.presentation-item {
+.presentation-card {
+  background-color: var(--bg-card);
   border-radius: 15px;
-  padding: clamp(20px, 4vw, 25px);
+  padding: 25px;
   transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-.presentation-item:hover {
+.presentation-card:hover {
   transform: translateY(-5px);
-}
-
-.presentation-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  background-color: var(--bg-hover);
 }
 
 .presentation-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: clamp(10px, 2vw, 15px);
+  margin-bottom: 15px;
+}
+
+.presentation-title {
+  color: var(--white);
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 600;
+  margin: 0;
 }
 
 .presentation-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.presentation-meta .tag {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  background-color: rgba(100, 255, 218, 0.1);
-  color: var(--green-bright);
-}
-
-.presentation-year {
-  color: var(--slate);
-  font-size: clamp(14px, 1.8vw, 16px);
-  padding: 4px 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.presentation-type {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  color: var(--green-bright);
-}
-
-.presentation-description {
-  color: var(--light-slate);
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.6;
-  margin: 0 0 clamp(15px, 3vw, 20px) 0;
-  flex-grow: 1;
-}
-
-.presentation-links {
+  flex-direction: column;
+  gap: 8px;
   margin-top: auto;
-  display: flex;
-  gap: clamp(10px, 2vw, 15px);
 }
 
-.presentation-link {
-  display: inline-flex;
+.meta-item {
+  display: flex;
   align-items: center;
   gap: 8px;
   color: var(--green-bright);
-  background-color: rgba(100, 255, 218, 0.1);
-  border: 1px solid var(--green-bright);
-  border-radius: 4px;
-  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
-  font-size: clamp(14px, 2vw, 16px);
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  width: fit-content;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: var(--tag-bg);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(100, 255, 218, 0.1);
 }
 
-.presentation-link:hover {
-  background-color: rgba(100, 255, 218, 0.2);
+.meta-item:hover {
+  background-color: var(--tag-bg-hover);
   transform: translateY(-2px);
+  border-color: rgba(100, 255, 218, 0.2);
+}
+
+.meta-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--green-bright);
+}
+
+@media (max-width: 1200px) {
+  .presentations-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
 }
 
 @media (max-width: 768px) {
-  .presentations-grid {
+  .presentations-content {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
   }
-  
-  .presentation-item {
+
+  .presentation-card {
     padding: 20px;
   }
-  
-  .presentation-links {
-    flex-direction: column;
-    width: 100%;
+
+  .presentation-title {
+    font-size: 20px;
   }
-  
-  .presentation-link {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+
+  .meta-item {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation-card {
+    padding: 18px;
   }
 }
 
 @media (hover: none) {
-  .presentation-item:hover,
-  .presentation-link:hover {
+  .presentation-card:hover,
+  .meta-item:hover {
     transform: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .presentation-item,
-  .presentation-link {
+  .presentation-card,
+  .meta-item {
     transition: none;
   }
 }

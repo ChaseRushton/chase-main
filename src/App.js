@@ -7,7 +7,6 @@ import theme from "./theme";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import Publications from "./components/Publications";
 import Presentations from "./components/Presentations";
 import Affiliations from "./components/Affiliations";
 import NavBar from "./components/NavBar";
@@ -26,7 +25,6 @@ function App() {
           <About></About>
           <Experience></Experience>
           <Projects></Projects>
-          <Publications></Publications>
           <Presentations></Presentations>
           <Affiliations></Affiliations>
         </div>
