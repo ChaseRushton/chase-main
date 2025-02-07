@@ -1,4 +1,4 @@
-# Chase Rushton's Portfolio Website
+# Chase Rushton's Portfolio Website ( work in progress)
 
 <div align="center">
 
