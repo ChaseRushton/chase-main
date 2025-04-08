@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/chase-main/static/css/main.448f98de.css",
+    "main.js": "/chase-main/static/js/main.b197ee97.js",
+    "static/media/me2.jpg": "/chase-main/static/media/me2.7eb7cf9dfbc3a969a840.jpg",
+    "index.html": "/chase-main/index.html",
+    "main.448f98de.css.map": "/chase-main/static/css/main.448f98de.css.map",
+    "main.b197ee97.js.map": "/chase-main/static/js/main.b197ee97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.448f98de.css",
+    "static/js/main.b197ee97.js"
+  ]
+}
