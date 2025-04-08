@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 50px;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .about-text-container {
@@ -96,7 +96,8 @@
   background-color: var(--bg-card);
   border-radius: 15px;
   padding: 40px;
-  margin-top: 30px;
+  margin: 30px auto 0;
+  max-width: 1200px;
 }
 
 .tech-stack-title {
@@ -109,16 +110,20 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .skill-category {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  padding: 25px;
+  padding: 20px;
   border: 1px solid rgba(100, 255, 218, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-category:hover {
@@ -139,20 +144,22 @@
 .tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .tech-tag {
   background-color: var(--tag-bg);
   color: var(--light-slate);
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
   border: 1px solid rgba(100, 255, 218, 0.1);
   cursor: default;
   white-space: nowrap;
+  text-align: center;
 }
 
 .tech-tag.expert {
@@ -179,10 +186,12 @@
 }
 
 .about-image-container {
-  position: relative;
+  position: sticky;
+  top: 100px;
   width: 100%;
   max-width: 300px;
   margin-left: auto;
+  height: fit-content;
 }
 
 .about-image-wrapper {
@@ -206,7 +215,8 @@
 @media (max-width: 1200px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
+    padding: 0 20px;
   }
 }
 
@@ -217,7 +227,14 @@
   }
 
   .about-image-container {
-    margin: 0 auto;
+    position: relative;
+    top: 0;
+    margin: 0 auto 40px;
+    order: -1;
+  }
+
+  .about-text-container {
+    order: 2;
   }
 
   .skills-grid {
